@@ -36,9 +36,11 @@ describe Player do
   end
   
   describe '#move_west!' do
-    player = Player.new
-    player.location = [0, 0]
-    player.move_west!
-    player.location.should == [0, -10]
+    it 'moves the player west' do
+      player = Player.new
+      player.location = [0, 0]
+      player.move_west!
+      player.location.should == [0, -10]
+    end
   end
 end
