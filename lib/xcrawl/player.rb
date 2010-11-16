@@ -10,4 +10,16 @@ class Player
   def move_north!
     @location[0] += 10
   end
+  
+  def move_south!
+    @location[0] -= 10
+  end
+  
+  def move_east!
+    @location[1] += 10
+  end
+  
+  def move_west!
+    @location[1] -= 10
+  end 
 end

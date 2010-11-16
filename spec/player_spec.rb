@@ -9,11 +9,36 @@ describe Player do
   end
   
   describe '#move_north!' do
-    it 'moves north' do
+    it 'moves the player north' do
       player = Player.new
       player.location = [0, 0]
       player.move_north!
       player.location.should == [10, 0]
     end
+  end
+  
+  describe '#move_south!' do
+    it 'moves the player south' do
+      player = Player.new
+      player.location = [0, 0]
+      player.move_south!
+      player.location.should == [-10, 0]
+    end
+  end
+  
+  describe '#move_east!' do
+    it 'moves the player east' do
+      player = Player.new
+      player.location = [0, 0]
+      player.move_east!
+      player.location.should == [0, 10]
+    end
+  end
+  
+  describe '#move_west!' do
+    player = Player.new
+    player.location = [0, 0]
+    player.move_west!
+    player.location.should == [0, -10]
   end
 end
