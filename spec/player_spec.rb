@@ -13,7 +13,7 @@ describe Player do
       player = Player.new
       player.location = [0, 0]
       player.move_north!
-      player.location.should == [10, 0]
+      player.location.should == [0, 10]
     end
   end
   
@@ -22,7 +22,7 @@ describe Player do
       player = Player.new
       player.location = [0, 0]
       player.move_south!
-      player.location.should == [-10, 0]
+      player.location.should == [0, -10]
     end
   end
   
@@ -31,7 +31,7 @@ describe Player do
       player = Player.new
       player.location = [0, 0]
       player.move_east!
-      player.location.should == [0, 10]
+      player.location.should == [10, 0]
     end
   end
   
@@ -40,7 +40,7 @@ describe Player do
       player = Player.new
       player.location = [0, 0]
       player.move_west!
-      player.location.should == [0, -10]
+      player.location.should == [-10, 0]
     end
   end
 end
